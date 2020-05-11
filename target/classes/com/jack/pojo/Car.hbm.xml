@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Hibernate的映射文件 -->
+<hibernate-mapping>
+    <!-- 建立类与表的映射 -->
+    <class name="com.jack.pojo.Car" table="t_car">
+        <!-- 建立类中的属性与表中的主键对应 -->
+        <id name="id" column="id">
+            <!-- 主键生成策略 -->
+            <generator class="identity"/>
+        </id>
+
+        <!-- 建立类中普通的属性和表的字段的对应 -->
+        <property name="name" column="name"/>
+        <property name="price" column="price"/>
+        <property name="details" column="details"/>
+        <property name="isSale" column="isSale"/>
+        <property name="type" column="type"/>
+        <property name="url" column="url"/>
+        <property name="brief" column="brief"/>
+        <set name="orders" order-by="id" cascade="all" inverse="true" lazy="false">
+            <key>
+                <column name="carId"/>
+            </key>
+            <one-to-many class="com.jack.pojo.Order"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

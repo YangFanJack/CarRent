@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="do,action" />
+    <constant name="struts.custom.i18n.resources" value="utf-8" />
+    
+    <package name="userAndMessage" extends="struts-default">
+
+        <default-action-ref name="default" />
+
+<!--        <global-allowed-methods>login,register</global-allowed-methods>-->
+
+        <action name="checkCode" class="com.jack.action.CheckCodeAction">
+            <result name="success" type="stream">
+                <param name="contentType">image/png</param>
+                <param name="inputName">inputStream</param>
+            </result>
+        </action>
+
+
+        <!--        spring和struts2二者整合后，struts2的struts.xml中的class从原来的类百名改成spring中的bean的id-->
+
+<!--        UserAction-->
+        <action name="userLogin" class="userAction" method="login">
+            <result name="success">userFunc.jsp</result>
+            <result name="error">userLogin.jsp</result>
+        </action>
+        <action name="userRegister" class="userAction" method="register">
+            <result name="success">${page}.jsp</result>
+            <result name="error">${page}.jsp</result>
+        </action>
+        <action name="findUserByPage" class="userAction" method="findUserByPage">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="exitUserLogin" class="userAction" method="exitLogin">
+            <result name="success">index.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="deleteUser" class="userAction" method="deleteUser">
+            <result name="success" type= "redirectAction">findUserByPage.do</result>
+            <result name="error" type= "redirectAction">findUserByPage.do</result>
+        </action>
+
+<!--        ManagerAction-->
+        <action name="managerLogin" class="managerAction" method="login">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageLogin.jsp</result>
+        </action>
+        <action name="addManager" class="managerAction" method="addManager">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="findManagerByPage" class="managerAction" method="findManagerByPage">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="exitManagerLogin" class="managerAction" method="exitLogin">
+            <result name="success">index.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="deleteManager" class="managerAction" method="deleteManager">
+            <result name="success" type= "redirectAction">findManagerByPage.do</result>
+            <result name="error" type= "redirectAction">findManagerByPage.do</result>
+        </action>
+
+<!--        ContactAction-->
+        <action name="submitMessage" class="contactAction" method="submitMessage">
+            <result name="success">${page}.jsp</result>
+            <result name="error">${page}.jsp</result>
+        </action>
+        <action name="findMessageByPage" class="contactAction" method="findMessageByPage">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="readMessage" class="contactAction" method="readMessage">
+            <result name="success" type= "redirectAction">${page}</result>
+            <result name="error" type= "redirectAction">${page}</result>
+        </action>
+        <action name="findMessageById" class="contactAction" method="findMessageById">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+
+<!--        CarAction-->
+        <action name="addCar" class="carAction" method="addCar">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="updateCar" class="carAction" method="updateCar">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="findCarByPage" class="carAction" method="findCarByPage">
+            <result name="success">${page}.jsp</result>
+            <result name="error">${page}.jsp</result>
+        </action>
+        <action name="findCarById" class="carAction" method="findCarById">
+            <result name="success">${page}.jsp</result>
+            <result name="error">${page}.jsp</result>
+        </action>
+        <action name="deleteCar" class="carAction" method="deleteCar">
+            <result name="success" type= "redirectAction">findCarByPage.do?del=x</result>
+            <result name="error" type= "redirectAction">findCarByPage.do?del=x</result>
+        </action>
+
+
+<!--        OrderAction-->
+        <action name="orderCar" class="orderAction" method="orderCar">
+            <result name="success">userFunc.jsp</result>
+            <result name="error">userFunc.jsp</result>
+        </action>
+
+        <action name="confirmOrder" class="orderAction" method="confirmOrder">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+
+        <action name="findOrderByPage" class="orderAction" method="findOrderByPage">
+            <result name="success">${page}.jsp</result>
+            <result name="error">${page}.jsp</result>
+        </action>
+        <action name="deleteOrder" class="orderAction" method="deleteOrder">
+            <result name="success" type= "redirectAction">findOrderByPage.do?page=userFunc</result>
+            <result name="error" type= "redirectAction">findOrderByPage.do?page=userFunc</result>
+        </action>
+
+<!--        RentAction-->
+        <action name="findRentByPage" class="rentAction" method="findRentByPage">
+            <result name="success">${page}.jsp?$it={it}</result>
+            <result name="error">${page}.jsp?it={it}</result>
+        </action>
+        <action name="addRent" class="rentAction" method="addRent">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="updateRent" class="rentAction" method="updateRent">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+        <action name="deleteRent" class="rentAction" method="deleteRent">
+            <result name="success" type= "redirectAction">findRentByPage.do</result>
+            <result name="error" type= "redirectAction">findRentByPage.do</result>
+        </action>
+        <action name="findRentById" class="rentAction" method="findRentById">
+            <result name="success">manageFunc.jsp</result>
+            <result name="error">manageFunc.jsp</result>
+        </action>
+
+<!--        InitAction-->
+        <action name="findInit" class="initAction" method="findInit">
+            <result name="success">index.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+
+
+<!--        默认跳转页面-->
+        <action name="default">
+            <result>test.html</result>
+        </action>
+    </package>
+</struts>

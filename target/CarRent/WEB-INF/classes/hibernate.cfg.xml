@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+<!--    配置hibernate基本属性-->
+    <property name="connection.url">jdbc:mysql:///carrent</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+
+    <!--    方言-->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+<!--    是否格式化sql-->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+<!--    生成数据表的策略-->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+<!--    二级缓存相关-->
+
+
+    <!-- ====可选配置==== -->
+    <!-- 配置连接池 -->
+    <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+    <!-- 在连接池中可用的数据库连接的最少数目 -->
+    <property name="hibernate.c3p0.min_size">5</property>
+    <!-- 在连接池中所有数据库连接的最大数目 -->
+    <property name="hibernate.c3p0.max_size">20</property>
+    <!-- 设定数据库连接的过期时间，以秒为单位，如果连接池中的某个数据库连接处于空闲状态的时间 超过了timeout时间，就会从连接池中清除。 -->
+    <property name="hibernate.c3p0.timeout">120</property>
+    <!-- 每3000秒检查所有连接池中的空闲连接，以秒为单位 -->
+    <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+    <mapping resource="com/jack/pojo/Car.hbm.xml"/>
+    <mapping resource="com/jack/pojo/Manager.hbm.xml"/>
+    <mapping resource="com/jack/pojo/Message.hbm.xml"/>
+    <mapping resource="com/jack/pojo/Order.hbm.xml"/>
+    <mapping resource="com/jack/pojo/Rent.hbm.xml"/>
+    <mapping resource="com/jack/pojo/User.hbm.xml"/>
+
+  </session-factory>
+</hibernate-configuration>
