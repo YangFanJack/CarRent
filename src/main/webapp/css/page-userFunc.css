@@ -131,7 +131,7 @@ body{
 
 .content .content1{
     width: 1000px;
-    height: 1000px;
+    /*height: 1000px;*/
     background-color: white;
     margin: 0 auto;
     position: relative;
@@ -144,8 +144,8 @@ body{
 .content .hyy{
     margin: 0 auto;
     width: 1000px;
-    height: 500px;
-    background: url("https://s1.ax1x.com/2020/05/11/YYKRMT.jpg") no-repeat;
+    height: 400px;
+    background: url("https://s1.ax1x.com/2020/05/12/YNG800.jpg") no-repeat;
 }
 
 .content .left-column {

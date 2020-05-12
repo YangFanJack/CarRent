@@ -93,7 +93,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
             currentPage="1";
         }
         if(pageSize == null || "".equals(pageSize)){
-            pageSize="5";
+            pageSize="10";
         }
         if(Integer.parseInt(currentPage) <= 1){
             currentPage = "1";

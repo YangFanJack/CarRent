@@ -80,7 +80,7 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order> {
             currentPage="1";
         }
         if(pageSize == null || "".equals(pageSize)){
-            pageSize="5";
+            pageSize="10";
         }
         if(Integer.parseInt(currentPage) <= 1){
             currentPage = "1";

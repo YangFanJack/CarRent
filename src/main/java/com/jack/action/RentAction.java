@@ -75,7 +75,7 @@ public class RentAction extends ActionSupport implements ModelDriven<Rent> {
             currentPage="1";
         }
         if(pageSize == null || "".equals(pageSize)){
-            pageSize="6";
+            pageSize="10";
         }
         if(Integer.parseInt(currentPage) <= 1){
             currentPage = "1";
