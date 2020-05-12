@@ -45,8 +45,9 @@
 
             //判断从index来的rent信息指向
             var spath = decodeURI(window.location.pathname).split("/")[2];
-            var Xpath = decodeURI(document.location.href).toString().split("?")[1].split("=")[2];
+            var Xpath = decodeURI(document.location.href).toString().split("?")[1].split("=")[2].split("&")[0];
             let all=document.getElementsByClassName("href");
+            // alert(Xpath);
             for(let i=0;i<all.length;i++){
                 if(all[i].innerHTML === Xpath){
                     let allC=document.getElementsByClassName("details");
@@ -74,7 +75,7 @@
     <!--创建导航条-->
     <ul class="nav">
         <li>
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>
             <p>ABOUT RENT</p>
         </li>
         <li>
@@ -129,18 +130,18 @@
         </s:iterator>
         <div class="pageNum">
             <ul>
-                <li><a href="findRentByPage.do?page=aboutRent">首页</a></li>
-                <li class="threeword"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&pageSize=5">上一页</a></li>
+                <li><a href="findRentByPage.do?page=aboutRent&pageSize=6">首页</a></li>
+                <li class="threeword"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&pageSize=6">上一页</a></li>
                 <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                     <s:if test="resultInfo.data.currentPage == #st.count">
-                        <li class="curPage"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="#st.count"/>&pageSize=5"><s:property value="#st.count"/></a></li>
+                        <li class="curPage"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="#st.count"/>&pageSize=6"><s:property value="#st.count"/></a></li>
                     </s:if>
                     <s:if test="resultInfo.data.currentPage != #st.count">
-                        <li><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="#st.count"/>&pageSize=5"><s:property value="#st.count"/></a></li>
+                        <li><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="#st.count"/>&pageSize=6"><s:property value="#st.count"/></a></li>
                     </s:if>
                 </s:iterator>
-                <li class="threeword"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&pageSize=5&total=<s:property value="resultInfo.data.totalPage"/>">下一页</a></li>
-                <li><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.totalPage"/>&pageSize=5">末页</a></li>
+                <li class="threeword"><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&pageSize=6&total=<s:property value="resultInfo.data.totalPage"/>">下一页</a></li>
+                <li><a href="findRentByPage.do?page=aboutRent&currentPage=<s:property value="resultInfo.data.totalPage"/>&pageSize=6">末页</a></li>
             </ul>
             共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
         </div>
@@ -152,7 +153,7 @@
     <div class="w">
         <p><a href="findInit.do">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="aboutUs.jsp">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="findRentByPage.do?page=aboutRent">租车须知</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车须知</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findCarByPage.do?isSale=1&page=weekSpecials">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="contactUs.jsp">在线留言</a></p>
         <br/>

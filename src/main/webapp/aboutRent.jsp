@@ -45,8 +45,9 @@
 
             //判断从index来的rent信息指向
             var spath = decodeURI(window.location.pathname).split("/")[2];
-            var Xpath = decodeURI(document.location.href).toString().split("?")[1].split("=")[2];
+            var Xpath = decodeURI(document.location.href).toString().split("?")[1].split("=")[2].split("&")[0];
             let all=document.getElementsByClassName("href");
+            // alert(Xpath);
             for(let i=0;i<all.length;i++){
                 if(all[i].innerHTML === Xpath){
                     let allC=document.getElementsByClassName("details");

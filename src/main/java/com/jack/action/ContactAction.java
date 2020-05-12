@@ -50,11 +50,21 @@ public class ContactAction extends ActionSupport implements ModelDriven<Message>
         if(!contactService.submit(message)){
             resultInfo.setMsg("留言失败！");
             resultInfo.setFlag(false);
-            return ERROR;
+            if(page.equals("contactUs.jsp")){
+                return ERROR;
+            }
+            else{
+                return "no";
+            }
         }
         resultInfo.setMsg("留言成功");
         resultInfo.setFlag(true);
-        return SUCCESS;
+        if(page.equals("contactUs.jsp")){
+            return SUCCESS;
+        }
+        else{
+            return "yes";
+        }
     }
 
     /**

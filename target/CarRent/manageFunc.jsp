@@ -250,7 +250,7 @@
     <!--创建导航条-->
     <ul class="nav">
         <li>
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>
             <p>ABOUT RENT</p>
         </li>
         <li>
@@ -875,18 +875,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findUserByPage.do?currentPage=1&pageSize=5&userName=<s:property value="#condition.userName"/>">首页</a></li>
-                        <li class="threeword"><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.currentPage-1"/>&pageSize=5&userName=<s:property value="#condition.userName"/>">上一页</a></li>
+                        <li><a href="findUserByPage.do?currentPage=1&userName=<s:property value="#condition.userName"/>">首页</a></li>
+                        <li class="threeword"><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.currentPage-1"/>&userName=<s:property value="#condition.userName"/>">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findUserByPage.do?currentPage=<s:property value="#st.count"/>&pageSize=5&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findUserByPage.do?currentPage=<s:property value="#st.count"/>&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findUserByPage.do?currentPage=<s:property value="#st.count"/>&pageSize=5&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
+                                <li><a href="findUserByPage.do?currentPage=<s:property value="#st.count"/>&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.currentPage+1"/>&pageSize=5&total=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">下一页</a></li>
-                        <li><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.totalPage"/>&pageSize=5&userName=<s:property value="#condition.userName"/>">末页</a></li>
+                        <li class="threeword"><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">下一页</a></li>
+                        <li><a href="findUserByPage.do?currentPage=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -917,18 +917,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findManagerByPage.do?currentPage=1&pageSize=5&userName=<s:property value="#condition.userName"/>">首页</a></li>
-                        <li class="threeword"><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.currentPage-1"/>&pageSize=5&userName=<s:property value="#condition.userName"/>">上一页</a></li>
+                        <li><a href="findManagerByPage.do?currentPage=1&userName=<s:property value="#condition.userName"/>">首页</a></li>
+                        <li class="threeword"><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.currentPage-1"/>&userName=<s:property value="#condition.userName"/>">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findManagerByPage.do?currentPage=<s:property value="#st.count"/>&pageSize=5&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findManagerByPage.do?currentPage=<s:property value="#st.count"/>&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findManagerByPage.do?currentPage=<s:property value="#st.count"/>&pageSize=5&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
+                                <li><a href="findManagerByPage.do?currentPage=<s:property value="#st.count"/>&userName=<s:property value="#condition.userName"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.currentPage+1"/>&pageSize=5&total=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">下一页</a></li>
-                        <li><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.totalPage"/>&pageSize=5&userName=<s:property value="#condition.userName"/>">末页</a></li>
+                        <li class="threeword"><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">下一页</a></li>
+                        <li><a href="findManagerByPage.do?currentPage=<s:property value="resultInfo.data.totalPage"/>&userName=<s:property value="#condition.userName"/>">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -975,17 +975,17 @@
                 <div class="pageNum">
                     <ul>
                         <li><a href="findRentByPage.do?page=manageFunc&content=<s:property value="#condition.content"/>">首页</a></li>
-                        <li class="threeword"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&pageSize=5&content=<s:property value="#condition.content"/>">上一页</a></li>
+                        <li class="threeword"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&content=<s:property value="#condition.content"/>">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="#st.count"/>&pageSize=5&content=<s:property value="#condition.content"/>"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="#st.count"/>&content=<s:property value="#condition.content"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="#st.count"/>&pageSize=5&content=<s:property value="#condition.content"/>"><s:property value="#st.count"/></a></li>
+                                <li><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="#st.count"/>&content=<s:property value="#condition.content"/>"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&pageSize=5&total=<s:property value="resultInfo.data.totalPage"/>&content=<s:property value="#condition.content"/>">下一页</a></li>
-                        <li><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.totalPage"/>&pageSize=5&content=<s:property value="#condition.content"/>">末页</a></li>
+                        <li class="threeword"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&content=<s:property value="#condition.content"/>">下一页</a></li>
+                        <li><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.totalPage"/>&content=<s:property value="#condition.content"/>">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -1062,7 +1062,7 @@
         <div class="tankuang">
             <div class="headerX">
                 <span>我是弹窗</span>
-                <div class="headerX-right" onclick="hidder03()"><a href="findCarByPage.do?type=短租自驾">x</a></div>
+                <div class="headerX-right" onclick="hidder03()"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
                 <form action="addCar.do" class="form">
@@ -1104,7 +1104,7 @@
         <div class="tankuang">
             <div class="headerX">
                 <span>我是弹窗</span>
-                <div class="headerX-right" onclick="hidder04()"><a href="findCarByPage.do?type=长租服务">x</a></div>
+                <div class="headerX-right" onclick="hidder04()"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
                 <form action="addCar.do" class="form">
@@ -1146,7 +1146,7 @@
         <div class="tankuang">
             <div class="headerX">
                 <span>我是弹窗</span>
-                <div class="headerX-right" onclick="hidder05()"><a href="findCarByPage.do?type=企业租车">x</a></div>
+                <div class="headerX-right" onclick="hidder05()"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
                 <form action="addCar.do" class="form">
@@ -1188,7 +1188,7 @@
         <div class="tankuang">
             <div class="headerX">
                 <span>我是弹窗</span>
-                <div class="headerX-right" onclick="hidder06()"><a href="findCarByPage.do?type=顺风车站">x</a></div>
+                <div class="headerX-right" onclick="hidder06()"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
                 <form action="addCar.do" class="form">
@@ -1230,7 +1230,7 @@
         <div class="tankuang">
             <div class="headerX">
                 <span>我是弹窗</span>
-                <div class="headerX-right" onclick="hidder07()"><a href="findCarByPage.do?isSale=1">x</a></div>
+                <div class="headerX-right" onclick="hidder07()"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
                 <form action="addCar.do" class="form">
@@ -1586,7 +1586,7 @@
     <div class="w">
         <p><a href="findInit.do">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="aboutUs.jsp">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findCarByPage.do?isSale=1&page=weekSpecials">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="contactUs.jsp">在线留言</a></p>
         <br/>

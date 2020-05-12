@@ -57,7 +57,7 @@
     <!--创建导航条-->
     <ul class="nav">
         <li>
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>
             <p>ABOUT RENT</p>
         </li>
         <li>
@@ -124,7 +124,7 @@
     <div class="w">
         <p><a href="findInit.do">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="aboutUs.jsp">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findCarByPage.do?isSale=1&page=weekSpecials">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="contactUs.jsp">在线留言</a></p>
         <br/>

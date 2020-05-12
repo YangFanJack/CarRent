@@ -60,4 +60,13 @@ public class ResultInfo implements Serializable {
     public void setMsg(String errorMsg) {
         this.Msg = errorMsg;
     }
+
+    @Override
+    public String toString() {
+        return "ResultInfo{" +
+                "flag=" + flag +
+                ", data=" + data +
+                ", Msg='" + Msg + '\'' +
+                '}';
+    }
 }

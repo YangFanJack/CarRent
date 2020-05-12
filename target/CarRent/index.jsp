@@ -47,14 +47,14 @@
 </head>
 <body>
 <%
-    session.setAttribute("path","index");
+    session.setAttribute("path","findInit.do");
 %>
 <!--头部-->
 <div class="header w">
     <!--创建导航条-->
     <ul class="nav">
         <li>
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>
             <p>ABOUT RENT</p>
         </li>
         <li>
@@ -131,10 +131,10 @@
                 <p class="p1">Instructions for car rental</p>
                 <div class="wenzi">
                     <s:iterator value="#list[1]" begin="0" end="5" var="name" status="st">
-                        <div><a href="findRentByPage.do?page=aboutRent&it=<s:property value="#name.item"/>"><s:property value="#name.item"/></a></div><hr>
+                        <div><a href="findRentByPage.do?page=aboutRent&it=<s:property value="#name.item"/>&pageSize=6"><s:property value="#name.item"/></a></div><hr>
                     </s:iterator>
                 </div>
-                <a href="findRentByPage.do?page=aboutRent"><button>了解更多租车资讯</button></a>
+                <a href="findRentByPage.do?page=aboutRent&pageSize=6"><button>了解更多租车资讯</button></a>
             </div>
             <div class="us">
                 <h2>关于我们</h2>
@@ -168,7 +168,7 @@
                         </div>
                         <a href="javascript:void(0);"><button type="submit">提交</button></a>
                         <br/>
-                        <s:property value="resultInfo.msg"/>
+                        <s:property value="msg"/>
                     </div>
                 </form>
             </div>
@@ -181,7 +181,7 @@
     <div class="w">
         <p><a href="findInit.do">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="aboutUs.jsp">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="findRentByPage.do?page=aboutRent">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="findRentByPage.do?page=aboutRent&pageSize=6">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findCarByPage.do?isSale=1&page=weekSpecials">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="contactUs.jsp">在线留言</a></p>
         <br/>

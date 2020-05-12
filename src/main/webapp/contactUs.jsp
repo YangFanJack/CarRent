@@ -44,7 +44,7 @@
 </head>
 <body>
 <%
-    session.setAttribute("path","contactUs");
+    session.setAttribute("path","contactUs.jsp");
 %>
 <!--头部-->
 <div class="header w">

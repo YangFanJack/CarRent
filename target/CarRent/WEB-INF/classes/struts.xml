@@ -70,8 +70,10 @@
 
 <!--        ContactAction-->
         <action name="submitMessage" class="contactAction" method="submitMessage">
-            <result name="success">${page}.jsp</result>
-            <result name="error">${page}.jsp</result>
+            <result name="success">${page}</result>
+            <result name="error">${page}</result>
+            <result name="yes" type= "redirectAction">${page}?msg=1</result>
+            <result name="no" type= "redirectAction">${page}?msg=2</result>
         </action>
         <action name="findMessageByPage" class="contactAction" method="findMessageByPage">
             <result name="success">manageFunc.jsp</result>

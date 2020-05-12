@@ -47,7 +47,7 @@
 </head>
 <body>
 <%
-    session.setAttribute("path","index");
+    session.setAttribute("path","findInit.do");
 %>
 <!--头部-->
 <div class="header w">
@@ -168,7 +168,7 @@
                         </div>
                         <a href="javascript:void(0);"><button type="submit">提交</button></a>
                         <br/>
-                        <s:property value="resultInfo.msg"/>
+                        <s:property value="msg"/>
                     </div>
                 </form>
             </div>
