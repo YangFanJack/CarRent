@@ -626,13 +626,13 @@
             <div class="right-content con_colm" id="con_colm_1" style="display:block">
                 <form action="findOrderByPage.do" class="search">
                     <input type="hidden" name="isConfirm" value=0>
-                    <input type="hidden" name="page" value="userFunc">
                     <input name="id" type="text" placeholder="订单号查询" class="search_input" autocomplete="off">
                     <button class="search-button">搜索</button>
                 </form>
                 <table>
                     <tr>
                         <th>编号</th>
+                        <th>订单编号</th>
                         <th>车名</th>
                         <th>买主名</th>
                         <th>提交时间</th>
@@ -644,6 +644,7 @@
                     <s:iterator value="resultInfo.data.list" var="name" status="st">
                         <tr>
                             <td><div><s:property value="#st.count"/></div></td>
+                            <td><div><s:property value="#name.id"/></div></td>
                             <td><div><s:property value="#name.car.name"/></div></td>
                             <td><div><s:property value="#name.user.userName"/></div></td>
                             <td><div><s:property value="#name.takeTime"/></div></td>
@@ -675,13 +676,13 @@
             <div class="right-content con_colm" id="con_colm_2" style="display:none">
                 <form action="findOrderByPage.do" class="search">
                     <input type="hidden" name="isConfirm" value=1>
-                    <input type="hidden" name="page" value="userFunc">
                     <input name="id" type="text" placeholder="订单号查询" class="search_input" autocomplete="off">
                     <button class="search-button">搜索</button>
                 </form>
                 <table>
                     <tr>
                         <th>编号</th>
+                        <th>订单编号</th>
                         <th>车名</th>
                         <th>买主名</th>
                         <th>提交时间</th>
@@ -692,6 +693,7 @@
                     <s:iterator value="resultInfo.data.list" var="name" status="st">
                         <tr>
                             <td><div><s:property value="#st.count"/></div></td>
+                            <td><div><s:property value="#name.id"/></div></td>
                             <td><div><s:property value="#name.car.name"/></div></td>
                             <td><div><s:property value="#name.user.userName"/></div></td>
                             <td><div><s:property value="#name.takeTime"/></div></td>

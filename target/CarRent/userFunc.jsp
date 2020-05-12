@@ -170,6 +170,38 @@
                 setTab('one',2);
                 setTab('colm',1);
             }
+
+            //动态显示订单价格
+            let days1 = document.getElementById("days1");
+            days1.onblur=function(){
+                let dayss1 = days1.value;
+                let price1 = document.getElementById("price1").value;
+                document.getElementById("totalPrice1").innerHTML=(dayss1-0)*(price1-0);
+            }
+            let days2 = document.getElementById("days2");
+            days2.onblur=function(){
+                let dayss2 = days2.value;
+                let price2 = document.getElementById("price1").value;
+                document.getElementById("totalPrice2").innerHTML=(dayss2-0)*(price2-0);
+            }
+            let days3 = document.getElementById("days3");
+            days3.onblur=function(){
+                let dayss3 = days3.value;
+                let price3 = document.getElementById("price1").value;
+                document.getElementById("totalPrice3").innerHTML=(dayss3-0)*(price3-0);
+            }
+            let days4 = document.getElementById("days4");
+            days4.onblur=function(){
+                let dayss4 = days4.value;
+                let price4 = document.getElementById("price1").value;
+                document.getElementById("totalPrice4").innerHTML=(dayss4-0)*(price4-0);
+            }
+            let days5 = document.getElementById("days5");
+            days5.onblur=function(){
+                let dayss5 = days5.value;
+                let price5 = document.getElementById("price1").value;
+                document.getElementById("totalPrice5").innerHTML=(dayss5-0)*(price5-0);
+            }
         });
     </script>
 </head>
@@ -537,6 +569,7 @@
                 <table>
                     <tr>
                         <th>编号</th>
+                        <th>订单编号</th>
                         <th>车名</th>
                         <th>买主名</th>
                         <th>提交时间</th>
@@ -548,6 +581,7 @@
                     <s:iterator value="resultInfo.data.list" var="name" status="st">
                         <tr>
                             <td><div><s:property value="#st.count"/></div></td>
+                            <td><div><s:property value="#name.id"/></div></td>
                             <td><div><s:property value="#name.car.name"/></div></td>
                             <td><div><s:property value="#name.user.userName"/></div></td>
                             <td><div><s:property value="#name.takeTime"/></div></td>
@@ -586,6 +620,7 @@
                 <table>
                     <tr>
                         <th>编号</th>
+                        <th>订单编号</th>
                         <th>车名</th>
                         <th>买主名</th>
                         <th>提交时间</th>
@@ -596,6 +631,7 @@
                     <s:iterator value="resultInfo.data.list" var="name" status="st">
                         <tr>
                             <td><div><s:property value="#st.count"/></div></td>
+                            <td><div><s:property value="#name.id"/></div></td>
                             <td><div><s:property value="#name.car.name"/></div></td>
                             <td><div><s:property value="#name.user.userName"/></div></td>
                             <td><div><s:property value="#name.takeTime"/></div></td>
@@ -643,20 +679,17 @@
                             <input type="text" placeholder="车辆类型" name="car.type" readonly="readonly" value="<s:property value="resultInfo.data.type"/>">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                            <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                        </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
-                        </div>
+                            <input id="price1" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                            <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="租期(单位：天)" name="days">
+                            <input id="days1" type="text" placeholder="租期(单位：天)" name="days">
                         </div>
+                        总价：<label id="totalPrice1"></label>
                         <button type="submit" class="ui-button ui-button--primary">提交</button>
                         <br/>
                         <s:property value="resultInfo.msg"/>
@@ -682,20 +715,17 @@
                             <input type="text" placeholder="车辆类型" name="car.type" readonly="readonly" value="<s:property value="resultInfo.data.type"/>">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                            <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                        </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
-                        </div>
+                        <input id="price2" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                        <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="租期(单位：天)" name="days">
+                            <input id="days2" type="text" placeholder="租期(单位：天)" name="days">
                         </div>
+                        总价：<label id="totalPrice2"></label>
                         <button type="submit" class="ui-button ui-button--primary">提交</button>
                         <br/>
                         <s:property value="resultInfo.msg"/>
@@ -721,20 +751,17 @@
                             <input type="text" placeholder="车辆类型" name="car.type" readonly="readonly" value="<s:property value="resultInfo.data.type"/>">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                            <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                        </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
-                        </div>
+                        <input id="price3" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                        <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="租期(单位：天)" name="days">
+                            <input id="days3" type="text" placeholder="租期(单位：天)" name="days">
                         </div>
+                        总价：<label id="totalPrice3"></label>
                         <button type="submit" class="ui-button ui-button--primary">提交</button>
                         <br/>
                         <s:property value="resultInfo.msg"/>
@@ -760,20 +787,17 @@
                             <input type="text" placeholder="车辆类型" name="car.type" readonly="readonly" value="<s:property value="resultInfo.data.type"/>">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                            <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                        </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
-                        </div>
+                        <input id="price4" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                        <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="租期(单位：天)" name="days">
+                            <input id="days4" type="text" placeholder="租期(单位：天)" name="days">
                         </div>
+                        总价：<label id="totalPrice4"></label>
                         <button type="submit" class="ui-button ui-button--primary">提交</button>
                         <br/>
                         <s:property value="resultInfo.msg"/>
@@ -799,20 +823,17 @@
                             <input type="text" placeholder="车辆类型" name="car.type" readonly="readonly" value="<s:property value="resultInfo.data.type"/>">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                            <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                        </div>
-                        <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
-                        </div>
+                        <input id="price5" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                        <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
                         <div class="ui-input" style="padding: 5px 0px;">
-                            <input type="text" placeholder="租期(单位：天)" name="days">
+                            <input id="days5" type="text" placeholder="租期(单位：天)" name="days">
                         </div>
+                        总价：<label id="totalPrice5"></label>
                         <button type="submit" class="ui-button ui-button--primary">提交</button>
                         <br/>
                         <s:property value="resultInfo.msg"/>

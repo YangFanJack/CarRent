@@ -25,7 +25,7 @@ public class InitDaoImpl implements InitDao {
 
     @Override
     public List<Car> findInitCar() {
-        String hql = "from Car c";
+        String hql = "from Car c where c.isSale=1";
         Query query = getSession().createQuery(hql);
         List<Car> carList = query.list();
         return carList;
