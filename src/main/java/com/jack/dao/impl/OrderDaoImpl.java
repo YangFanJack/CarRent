@@ -2,11 +2,14 @@ package com.jack.dao.impl;
 
 import com.jack.dao.OrderDao;
 import com.jack.pojo.Order;
+import com.jack.pojo.User;
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Transactional
@@ -24,6 +27,12 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public int findTotalCount(Order order) {
         String hql = "select count(id) from Order o where 1 = 1 ";
+        HttpServletRequest request = ServletActionContext.getRequest();
+        order.setUser(new User());
+        if(((String)request.getSession().getAttribute("mark")).equals("user")){
+            order.getUser().setId((Integer) request.getSession().getAttribute("loginUserId"));
+        }
+
         StringBuilder sb = new StringBuilder(hql);
         if(order.getId()>0){
             sb.append(" and o.id = "+order.getId()+" ");
@@ -40,6 +49,12 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public List<Order> findOrderByPage(int start, int ps, Order order) {
         String hql = "from Order o where 1 = 1 ";
+        HttpServletRequest request = ServletActionContext.getRequest();
+        order.setUser(new User());
+        if(((String)request.getSession().getAttribute("mark")).equals("user")){
+            order.getUser().setId((Integer) request.getSession().getAttribute("loginUserId"));
+        }
+
         StringBuilder sb = new StringBuilder(hql);
         if(order.getId()>0){
             sb.append(" and o.id = "+order.getId()+" ");
@@ -50,8 +65,6 @@ public class OrderDaoImpl implements OrderDao {
         sb.append(" and o.isConfirm = "+order.getIsConfirm()+" ");
         hql = sb.toString();
 
-        System.out.println("=================================");
-        System.out.println(order);
 
         Query query = getSession().createQuery(hql);
         //设置偏移量

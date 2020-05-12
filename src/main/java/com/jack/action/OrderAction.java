@@ -7,10 +7,7 @@ import com.jack.service.OrderService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import org.apache.struts2.ServletActionContext;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 public class OrderAction extends ActionSupport implements ModelDriven<Order> {
@@ -41,8 +38,6 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order> {
      */
     public String orderCar(){
         System.out.println("orderCar");
-        HttpServletResponse response = ServletActionContext.getResponse();
-        HttpServletRequest request = ServletActionContext.getRequest();
         order.setIsConfirm(0);
         order.setTakeTime(new Date());
         order.setTotalPrice(order.getDays()*order.getCar().getPrice());

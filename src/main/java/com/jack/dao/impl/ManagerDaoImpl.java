@@ -2,11 +2,13 @@ package com.jack.dao.impl;
 
 import com.jack.dao.ManagerDao;
 import com.jack.pojo.Manager;
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Transactional
@@ -24,6 +26,8 @@ public class ManagerDaoImpl implements ManagerDao {
 
     @Override
     public boolean login(Manager manager) {
+        HttpServletRequest request = ServletActionContext.getRequest();
+        request.getSession().removeAttribute("loginUserId");
         //1 创建query对象
         //根据cid和custName查询
         String hql = "from Manager m where m.userName=?1 and m.password=?2";

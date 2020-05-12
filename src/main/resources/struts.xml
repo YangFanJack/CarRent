@@ -38,8 +38,8 @@
             <result name="error">manageFunc.jsp</result>
         </action>
         <action name="exitUserLogin" class="userAction" method="exitLogin">
-            <result name="success">index.jsp</result>
-            <result name="error">index.jsp</result>
+            <result name="success" type= "redirectAction">findInit.do</result>
+            <result name="error" type= "redirectAction">findInit.do</result>
         </action>
         <action name="deleteUser" class="userAction" method="deleteUser">
             <result name="success" type= "redirectAction">findUserByPage.do</result>
@@ -60,8 +60,8 @@
             <result name="error">manageFunc.jsp</result>
         </action>
         <action name="exitManagerLogin" class="managerAction" method="exitLogin">
-            <result name="success">index.jsp</result>
-            <result name="error">index.jsp</result>
+            <result name="success" type= "redirectAction">findInit.do</result>
+            <result name="error" type= "redirectAction">findInit.do</result>
         </action>
         <action name="deleteManager" class="managerAction" method="deleteManager">
             <result name="success" type= "redirectAction">findManagerByPage.do</result>

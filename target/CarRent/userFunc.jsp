@@ -329,18 +329,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findCarByPage.do?isSale=1&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
+                        <li><a href="findCarByPage.do?type=短租自驾&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
-                        <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
+                        <li><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -378,18 +378,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findCarByPage.do?isSale=1&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
+                        <li><a href="findCarByPage.do?type=长租服务&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
-                        <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
+                        <li><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -427,18 +427,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findCarByPage.do?isSale=1&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
+                        <li><a href="findCarByPage.do?type=企业租车&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
-                        <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
+                        <li><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -476,18 +476,18 @@
                 </table>
                 <div class="pageNum">
                     <ul>
-                        <li><a href="findCarByPage.do?isSale=1&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
+                        <li><a href="findCarByPage.do?type=顺风车站&name=<s:property value="#condition.name"/>&page=userFunc">首页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.currentPage-1"/>&name=<s:property value="#condition.name"/>&page=userFunc">上一页</a></li>
                         <s:iterator value="new int[resultInfo.data.totalPage]" status="st">
                             <s:if test="resultInfo.data.currentPage == #st.count">
-                                <li class="curPage"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li class="curPage"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                             <s:if test="resultInfo.data.currentPage != #st.count">
-                                <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
+                                <li><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="#st.count"/>&name=<s:property value="#condition.name"/>&page=userFunc"><s:property value="#st.count"/></a></li>
                             </s:if>
                         </s:iterator>
-                        <li class="threeword"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
-                        <li><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
+                        <li class="threeword"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.currentPage+1"/>&total=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">下一页</a></li>
+                        <li><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.totalPage"/>&name=<s:property value="#condition.name"/>&page=userFunc">末页</a></li>
                     </ul>
                     共条<s:property value="resultInfo.data.totalCount"/>数据，共<s:property value="resultInfo.data.totalPage"/>页
                 </div>
@@ -681,8 +681,9 @@
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
-                            <input id="price1" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
-                            <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
+                        <input type="hidden" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
+                        <input id="price1" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
+                        <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="用户名" name="user.userName" readonly="readonly" value="${sessionScope.loginUser}">
                         </div>
@@ -717,6 +718,7 @@
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
+                        <input type="hidden" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
                         <input id="price2" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
                         <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
@@ -753,6 +755,7 @@
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
+                        <input type="hidden" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
                         <input id="price3" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
                         <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
@@ -789,6 +792,7 @@
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
+                        <input type="hidden" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
                         <input id="price4" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
                         <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
@@ -825,6 +829,7 @@
                         <div class="ui-input" style="padding: 5px 0px;">
                             <input type="text" placeholder="车名" name="car.name" readonly="readonly" value="<s:property value="resultInfo.data.name"/>">
                         </div>
+                        <input type="hidden" placeholder="车辆编号" name="car.id" readonly="readonly" value="<s:property value="resultInfo.data.id"/>">
                         <input id="price5" type="hidden" placeholder="价格/日" name="car.price" readonly="readonly" value="<s:property value="resultInfo.data.price"/>">
                         <input type="hidden" placeholder="用户编号" name="user.id" readonly="readonly" value="${sessionScope.loginUserId}">
                         <div class="ui-input" style="padding: 5px 0px;">
@@ -847,7 +852,7 @@
 <!--网站底部-->
 <div class="footer">
     <div class="w">
-        <p><a href="index.jsp">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <p><a href="findInit.do">网站主页</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="aboutUs.jsp">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findRentByPage.do?page=aboutRent">租车资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="findCarByPage.do?isSale=1&page=weekSpecials">本周特价</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
