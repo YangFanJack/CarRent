@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户注册</title>
+    <title>普通用户模块</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/page-userFunc.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
@@ -666,7 +666,7 @@
     <div class="zhezhao" id="zhezhao01" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>订单填写</span>
                 <div class="headerX-right" onclick="hidder01()"><a href="findCarByPage.do?type=短租自驾&page=userFunc">x</a></div>
             </div>
             <div class="kuang">
@@ -703,7 +703,7 @@
     <div class="zhezhao" id="zhezhao02" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>订单填写</span>
                 <div class="headerX-right" onclick="hidder02()"><a href="findCarByPage.do?type=长租服务&page=userFunc">x</a></div>
             </div>
             <div class="kuang">
@@ -740,7 +740,7 @@
     <div class="zhezhao" id="zhezhao03" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>订单填写</span>
                 <div class="headerX-right" onclick="hidder03()"><a href="findCarByPage.do?type=企业租车&page=userFunc">x</a></div>
             </div>
             <div class="kuang">
@@ -777,7 +777,7 @@
     <div class="zhezhao" id="zhezhao04" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>订单填写</span>
                 <div class="headerX-right" onclick="hidder04()"><a href="findCarByPage.do?type=顺风车站&page=userFunc">x</a></div>
             </div>
             <div class="kuang">
@@ -814,7 +814,7 @@
     <div class="zhezhao" id="zhezhao05" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>订单填写</span>
                 <div class="headerX-right" onclick="hidder05()"><a href="findCarByPage.do?isSale=1&page=userFunc">x</a></div>
             </div>
             <div class="kuang">

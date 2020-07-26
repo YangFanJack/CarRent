@@ -21,7 +21,7 @@
         <property name="type" column="type"/>
         <property name="url" column="url"/>
         <property name="brief" column="brief"/>
-        <set name="orders" order-by="id" cascade="all" inverse="true" lazy="false">
+        <set name="orders" order-by="id" cascade="delete" inverse="true" lazy="false">
             <key>
                 <column name="carId"/>
             </key>

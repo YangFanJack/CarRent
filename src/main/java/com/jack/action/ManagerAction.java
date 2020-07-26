@@ -73,7 +73,7 @@ public class ManagerAction extends ActionSupport implements ModelDriven<Manager>
             return ERROR;
         }
         if(!managerService.addManager(manager)){
-            resultInfo.setMsg("因为数据库写入失败，添加管理员失败!");
+            resultInfo.setMsg("用户名重复，添加管理员失败!");
             resultInfo.setFlag(false);
             return ERROR;
         }

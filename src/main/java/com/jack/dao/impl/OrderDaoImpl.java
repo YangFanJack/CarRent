@@ -101,6 +101,7 @@ public class OrderDaoImpl implements OrderDao {
         query.setParameter(1,id);
         Order order = (Order) query.uniqueResult();
         if(order != null){
+            //防止级联错误
             order.getUser().getOrders().remove(order);
             order.getCar().getOrders().remove(order);
             getSession().delete(order);

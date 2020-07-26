@@ -101,9 +101,9 @@
                 <div class="ui-input">
                     <input type="password" placeholder="密码" name="password">
                 </div>
-                <p class="forget-password">
-                    <a href="">忘记密码？</a>
-                </p>
+<%--                <p class="forget-password">--%>
+<%--                    <a href="">忘记密码？</a>--%>
+<%--                </p>--%>
                 <button class="ui-button ui-button--primary">登录</button>
                 <s:property value="resultInfo.msg"/>
             </div>

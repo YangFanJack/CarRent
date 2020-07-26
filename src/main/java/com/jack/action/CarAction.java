@@ -82,7 +82,7 @@ public class CarAction extends ActionSupport implements ModelDriven<Car> {
             currentPage="1";
         }
         if(pageSize == null || "".equals(pageSize)){
-            pageSize="5";
+            pageSize="4";
         }
         if(Integer.parseInt(currentPage) <= 1){
             currentPage = "1";

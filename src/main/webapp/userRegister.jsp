@@ -106,7 +106,7 @@
                     <input type="text" placeholder="帐号" name="userName">
                 </div>
                 <div class="ui-input">
-                    <input type="password" placeholder="密码，6-16位，区分大小写" name="password">
+                    <input type="password" placeholder="密码" name="password">
                 </div>
                 <div class="ui-input narrow-input">
                     <input type="text" placeholder="验证码" name="checkCode">

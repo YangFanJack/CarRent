@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户注册</title>
+    <title>管理员模块</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/page-manageFunc.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
@@ -997,7 +997,7 @@
     <div class="zhezhao" id="zhezhao01" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>用户注册</span>
                 <div class="headerX-right" onclick="hidder01()"><a href="findUserByPage.do">x</a></div>
             </div>
             <div class="kuang">
@@ -1028,7 +1028,7 @@
     <div class="zhezhao" id="zhezhao02" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加管理员</span>
                 <div class="headerX-right" onclick="hidder02()"><a href="findManagerByPage.do">x</a></div>
             </div>
             <div class="kuang">
@@ -1044,13 +1044,13 @@
                             <input type="text" placeholder="姓名" name="name">
                         </div>
                         <div class="ui-input">
-                            <input type="password" placeholder="密码，6-16位，区分大小写" name="password">
+                            <input type="password" placeholder="密码" name="password">
                         </div>
                         <div class="ui-input narrow-input">
                             <input type="text" placeholder="验证码" name="checkCode">
                             <img style="float: right;margin-right: 30px;;width: 80px;height: 30px" class="checkCode" src="checkCode.do">
                         </div>
-                        <button class="ui-button ui-button--primary">注册</button>
+                        <button class="ui-button ui-button--primary">添加</button>
                         <s:property value="resultInfo.msg"/>
                     </div>
                 </form>
@@ -1061,7 +1061,7 @@
     <div class="zhezhao" id="zhezhao03" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加车辆</span>
                 <div class="headerX-right" onclick="hidder03()"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1103,7 +1103,7 @@
     <div class="zhezhao" id="zhezhao04" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加车辆</span>
                 <div class="headerX-right" onclick="hidder04()"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1145,7 +1145,7 @@
     <div class="zhezhao" id="zhezhao05" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加车辆</span>
                 <div class="headerX-right" onclick="hidder05()"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1187,7 +1187,7 @@
     <div class="zhezhao" id="zhezhao06" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加车辆</span>
                 <div class="headerX-right" onclick="hidder06()"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1229,7 +1229,7 @@
     <div class="zhezhao" id="zhezhao07" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加车辆</span>
                 <div class="headerX-right" onclick="hidder07()"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1271,7 +1271,7 @@
     <div class="zhezhao" id="zhezhao08" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改车辆</span>
                 <div class="headerX-right" onclick="hidder08()"><a href="findCarByPage.do?type=短租自驾&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1313,7 +1313,7 @@
     <div class="zhezhao" id="zhezhao09" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改车辆</span>
                 <div class="headerX-right" onclick="hidder09()"><a href="findCarByPage.do?type=长租服务&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1355,7 +1355,7 @@
     <div class="zhezhao" id="zhezhao10" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改车辆</span>
                 <div class="headerX-right" onclick="hidder10()"><a href="findCarByPage.do?type=企业租车&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1397,7 +1397,7 @@
     <div class="zhezhao" id="zhezhao11" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改车辆</span>
                 <div class="headerX-right" onclick="hidder11()"><a href="findCarByPage.do?type=顺风车站&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1439,7 +1439,7 @@
     <div class="zhezhao" id="zhezhao12" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改车辆</span>
                 <div class="headerX-right" onclick="hidder12()"><a href="findCarByPage.do?isSale=1&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1481,7 +1481,7 @@
     <div class="zhezhao" id="zhezhao13" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>添加资讯</span>
                 <div class="headerX-right" onclick="hidder13()"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1508,7 +1508,7 @@
     <div class="zhezhao" id="zhezhao14" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>修改资讯</span>
                 <div class="headerX-right" onclick="hidder14()"><a href="findRentByPage.do?page=manageFunc&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1535,7 +1535,7 @@
     <div class="zhezhao" id="zhezhao15" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>留言内容</span>
                 <div class="headerX-right" onclick="hidder15()"><a href="findMessageByPage.do?isRead=0&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">
@@ -1559,7 +1559,7 @@
     <div class="zhezhao" id="zhezhao16" style="display:none;">
         <div class="tankuang">
             <div class="headerX">
-                <span>我是弹窗</span>
+                <span>留言内容</span>
                 <div class="headerX-right" onclick="hidder16()"><a href="findMessageByPage.do?isRead=1&currentPage=<s:property value="resultInfo.data.currentPage"/>">x</a></div>
             </div>
             <div class="kuang">

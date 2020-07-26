@@ -75,7 +75,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
             return ERROR;
         }
         if(!userService.register(user)){
-            resultInfo.setMsg("因为数据库写入失败，注册失败!");
+            resultInfo.setMsg("用户名重复，注册失败!");
             resultInfo.setFlag(false);
             return ERROR;
         }
